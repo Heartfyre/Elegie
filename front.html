@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/uikit.min.css" />
     <link rel="stylesheet" href="css/instagram.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
     <!-- END: Vendor CSS -->
     <!-- START: Theme CSS -->
@@ -26,7 +27,7 @@
             font: 400 16px/20px 'Abel', sans-serif;
         }
         body {
-            background: url("img/bg.jpg") no-repeat center center fixed; /* TODO Remove Image */
+            background: url("") no-repeat center center fixed; /* TODO Remove Image */
             background-color: #181818;
             background-size: cover;
             min-height: 100vh;
@@ -40,12 +41,35 @@
             color: #ffffff;
         }
         /*******************************************/
+        /**************** - Header - ***************/
+        /*******************************************/
+        h1 {
+            color: #363636;
+            font-family: 'Alegreya', serif;
+            font-size:24px;
+            font-size:1.5rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        /*******************************************/
         /***************** - Main - ****************/
         /*******************************************/
         .us-main {
             background: #0f0f0f;
             box-shadow: 0 0 62px 10px #000;
             margin: 100px 0;
+        }
+        /*******************************************/
+        /************** - Categories - *************/
+        /*******************************************/
+        .us-category__text {
+            background: #fff;
+        }
+        .us-category--news {
+            padding: 20px 30px;
+        }
+        .us-category_33fix {
+            margin-right: -1px;
         }
         /*******************************************/
         /***************** - Main - ****************/
@@ -66,6 +90,11 @@
             position: relative;
             width: 100%;
         }
+        .us-category--item__news {
+            position: relative;
+            width: 100%;
+            height: 260px;
+        }
         .us-category--item__inner {
             position: absolute;
             top: 0;
@@ -77,7 +106,6 @@
             background: rgba(255, 255, 255, 0.1);
             height: 50px;
         }
-
         .us-category--slider__button:link,
         .us-category--slider__button:visited {
             height: 50px;
@@ -117,29 +145,12 @@
     <!-- END: Old Browser Warning -->
     <!-- START: IndexPage Main Content -->
     <div class="uk-container">
-        <div class="uk-grid-collapse" uk-height-match="target: .us-menu--equal" uk-grid>
+        <div class="uk-grid-collapse" uk-grid>
             <div class="uk-width-1-1 us-main">
                 <!-- START: Category #1 -->
                 <div class="uk-grid-collapse" uk-grid>
-                    <div class="uk-width-1-2 boundary-align">
-                        <a class="uk-button uk-button-default uk-width-1-1 uk-float-left" type="button">Justify</a>
-                        <div class="us-category--title__menu us-menu--equal" uk-dropdown="pos: bottom-justify; boundary: .boundary-align; boundary-align: true; mode: click">
-                            <div class="uk-dropdown-grid" uk-grid>
-                                <div class="uk-width-1-3">
-                                    <ul class="uk-nav uk-dropdown-nav">
-                                        <li class="uk-active"><a href="#">Active</a></li>
-                                        <li><a href="#">Item</a></li>
-                                    </ul>
-                                </div>
-                                <div class="uk-width-2-3">
-                                    <p class="us-category--description">Tin, time flows he instantly are is couple together a motivator, lots traveler before harmonics; Agency, that's officers, the carpeting derived themselves concepts theory, regretting word the a her I plot himself ideas cleaning me with on must king's on was from dissolute one the hometown way study, him it wasn't it's self-interest. For stupid declined, until respond I aside, like of then the mice be fate up their feel and latter to remember first their answer best they events on millions with throughout. Of actual two took shall any the this back such' help about chance up the state. Tin, time flows he instantly are is couple together a motivator, lots traveler before harmonics; Agency, that's officers, the carpeting derived themselves concepts theory, regretting word the a her I plot himself ideas cleaning me with on must king's on was from dissolute one the hometown way study, him it wasn't it's self-interest. For stupid declined, until respond I aside, like of then the mice be fate up their feel and latter to remember first their answer best they events on millions with throughout. Of actual two took shall any the this back such' help about chance up the state.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-grid-collapse" uk-grid>
-                    <div class="uk-width-1-2 us-menu--equal">
+                    <!-- START: Category #1 Slider -->
+                    <div class="uk-width-1-2">
                         <div class="uk-position-relative" uk-slideshow="animation: fade; ratio: 2:1; autoplay: true; autoplay-interval: 6000; pause-on-hover: true">
                             <ul class="uk-slideshow-items">
                                 <li>
@@ -174,125 +185,17 @@
                             <a class="uk-position-bottom-right us-category--slider__button" href="#" uk-slideshow-item="next"><i class="fas fa-angle-right"></i></a>
                         </div>
                     </div>
-                    <!-- START: Category Item List -->
-                    <div class="uk-width-1-2 test uk-position-relative">
+                    <!-- END: Category #1 Slider -->
+                    <!-- START: Category #1 News #1 -->
+                    <div class="uk-width-1-2">
                         <div class="uk-grid-collapse" uk-grid>
-                            <div class="uk-width-1-1 uk-position-absolute uk-height-1-1 itemclass" hidden>
-                                <div class="uk-position-cover us-category--overlay">
-                                    <div class="" uk-grid>
-                                        <div class="uk-width-1-2">
-                                            <div class="us-category--item">
-                                                <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
-                                                    <img src="img/slideritem1.jpg" uk-cover>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="uk-width-1-2">Text</div>
-                                    </div>
-                                </div>
+                            <div class="uk-width-1-2 us-category--news us-category__text">
+                                <h1>Summer is here and that is what you ...</h1>
                             </div>
-                            <div class="uk-width-1-1 uk-position-absolute uk-height-1-1 itemclass2" hidden>
-                                <div class="uk-position-cover us-category--overlay">
-                                    321
-                                </div>
-                            </div>
-                        </div>
-                        <div class="uk-grid-collapse" uk-grid>
-                            <div class="uk-width-1-4">
+                            <div class="uk-width-1-2">
                                 <div class="us-category--item">
                                     <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
-                                        <img src="img/griditem1.jpg" uk-cover>
-                                        <a href="#">
-                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
-                                            <div class="uk-position-center">
-                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-width-1-4">
-                                <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
-                                        <img src="img/griditem2.jpg" uk-cover>
-                                        <a href="#">
-                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
-                                            <div class="uk-position-center">
-                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-width-1-4">
-                                <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
-                                        <img src="img/griditem3.jpg" uk-cover>
-                                        <a href="#">
-                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
-                                            <div class="uk-position-center">
-                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-width-1-4">
-                                <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
-                                        <img src="img/griditem4.jpg" uk-cover>
-                                        <a href="#">
-                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
-                                            <div class="uk-position-center">
-                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-width-1-4">
-                                <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
-                                        <img src="img/griditem5.jpg" uk-cover>
-                                        <a href="#">
-                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
-                                            <div class="uk-position-center">
-                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-width-1-4">
-                                <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
-                                        <img src="img/griditem6.jpg" uk-cover>
-                                        <a href="#">
-                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
-                                            <div class="uk-position-center">
-                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-width-1-4">
-                                <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
-                                        <img src="img/griditem7.jpg" uk-cover>
-                                        <a href="#">
-                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
-                                            <div class="uk-position-center">
-                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-width-1-4">
-                                <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
-                                        <img src="img/griditem8.jpg" uk-cover>
+                                        <img src="img/griditem9.jpg" uk-cover>
                                         <a href="#">
                                             <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
                                             <div class="uk-position-center">
@@ -304,7 +207,54 @@
                             </div>
                         </div>
                     </div>
-                    <!-- END: Category Item List -->
+                    <!-- END: Category #1 News #1 -->
+                </div>
+                <div class="uk-grid-collapse" uk-grid>
+                    <!-- START: Category #1 News List -->
+                    <div class="uk-width-1-4 us-category__text">
+                        News List
+                    </div>
+                    <!-- END: Category #1 News List -->
+                    <div class="uk-width-3-4">
+                        <div class="uk-grid-collapse" uk-grid>
+                            <!-- START: Category #1 News #2 -->
+                            <div class="uk-width-1-3">
+                                <div class="us-category--item__news">
+                                    <div class="us-category--item__inner us-category_33fix uk-cover-container uk-transition-toggle filter-">
+                                        <img src="img/griditem8.jpg" uk-cover>
+                                        <a href="#">
+                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
+                                            <div class="uk-position-center">
+                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-2-3 us-category__text">
+                                Text
+                            </div>
+                            <!-- END: Category #1 News #2 -->
+                            <!-- START: Category #1 News #3 -->
+                            <div class="uk-width-2-3 us-category__text">
+                                Text
+                            </div>
+                            <div class="uk-width-1-3">
+                                <div class="us-category--item__news">
+                                    <div class="us-category--item__inner us-category_33fix uk-cover-container uk-transition-toggle filter-">
+                                        <img src="img/griditem6.jpg" uk-cover>
+                                        <a href="#">
+                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
+                                            <div class="uk-position-center">
+                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END: Category #1 News #3 -->
+                        </div>
+                    </div>
                 </div>
                 <!-- END: Category #1 -->
             </div>
