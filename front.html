@@ -12,6 +12,7 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png"> <!-- TODO Add new Image and upload! -->
     <!-- START: Vendor CSS -->
     <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/apps.css" />
     <link rel="stylesheet" href="css/instagram.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
@@ -27,7 +28,7 @@
             font: 400 16px/20px 'Abel', sans-serif;
         }
         body {
-            background: url("") no-repeat center center fixed; /* TODO Remove Image */
+            background: url("img/bg.jpg") no-repeat center center fixed; /* TODO Remove Image */
             background-color: #181818;
             background-size: cover;
             min-height: 100vh;
@@ -43,14 +44,7 @@
         /*******************************************/
         /**************** - Header - ***************/
         /*******************************************/
-        h1 {
-            color: #363636;
-            font-family: 'Alegreya', serif;
-            font-size:24px;
-            font-size:1.5rem;
-            margin: 0;
-            text-transform: uppercase;
-        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Alegreya', serif; }        
         /*******************************************/
         /***************** - Main - ****************/
         /*******************************************/
@@ -62,28 +56,106 @@
         /*******************************************/
         /************** - Categories - *************/
         /*******************************************/
-        .us-category__text {
+        .us-category__background {
             background: #fff;
         }
         .us-category--news {
             padding: 20px 30px;
         }
+        .cm-category--news__link:link,
+        .cm-category--news__link:visited {
+            display: block;
+        }
+        .cm-category--news__link:hover,
+        .cm-category--news__link:active {
+            background: #a69c87;
+            box-shadow: 0 0 30px 0 #000;
+            position: relative;
+            z-index: 9999;
+        }
+        .cm-category--news__link:hover p,
+        .cm-category--news__link:active p,
+        .cm-category--news__link:hover h1,
+        .cm-category--news__link:active h1 {
+            color: #fff;
+        }
+        .us-category--news__text h1 {
+            color: #363636;
+            font-size:18px;
+            font-size:1.125rem;
+            margin: 0;
+            padding: 20px 15px 0;
+            text-transform: uppercase;
+        }
+        .us-category--news__text p {
+            color: #a4a4a4;
+            font-size:16px;
+            font-size:1rem;
+            line-height: 24px;
+            padding: 0 15px;
+        }
+        .us-category--news__text p:first-of-type {
+            margin-top: 10px;
+        }
         .us-category_33fix {
             margin-right: -1px;
         }
-        /*******************************************/
-        /***************** - Main - ****************/
-        /*******************************************/
-        .us-category--title {
-
+        .us-category--slideshow .uk-position-center {
+            width: 100%;
         }
-        .us-category--title__menu {
-            margin-top: 0px;
-            /* height: 260px; */
+        .us-category--slideshow .uk-overlay-primary {
+            background: rgba(255, 255, 255, 0.1);
         }
-        .us-category--description {
-            height: 160px;
-            overflow-y: scroll;
+        .us-category--slideshow .uk-overlay {
+            padding: 8px 30px;
+        }
+        .us-category--slideshow h3 {
+            color: #fff;
+            font-size:20px;
+            font-size:1.25rem;
+            text-shadow: 0 0 1px #000;
+        }
+        ul.us-category--list__inner {
+            margin-bottom: 0px;
+        }
+        .us-category--list__inner>li:nth-child(n+2) {
+            margin-top: 0;
+        }
+        .us-category--list__inner h2 {
+            color: #363636;
+            font-size:18px;
+            font-size:1.125rem;
+            margin: 0;
+            padding: 20px 15px 0 15px;
+        }
+        .us-category--list__inner p {
+            color: #a4a4a4;
+            font-size:16px;
+            font-size:1rem;
+            line-height: 24px;
+            padding: 0 15px;
+        }
+        .us-category--list__inner hr {
+            margin: 0 15px;
+        }
+        .us-category--list__inner li a:first-of-type:link,
+        .us-category--list__inner li a:first-of-type:visited {
+            display: block;
+        }
+        .us-category--list__inner li a:first-of-type:hover,
+        .us-category--list__inner li a:first-of-type:active {
+            background: #a69c87;
+            background: #a69c87;
+        }
+        .us-category--list__inner li a:first-of-type:hover h2,
+        .us-category--list__inner li a:first-of-type:active h2,
+        .us-category--list__inner li a:first-of-type:hover p,
+        .us-category--list__inner li a:first-of-type:active p {
+            color: #fff;
+        }
+        .us-category--list__inner li a:first-of-type:hover hr,
+        .us-category--list__inner li a:first-of-type:active hr {
+            border-top: 1px solid #a69c87;
         }
         .us-category--item {
             padding-top: 100%;
@@ -93,7 +165,11 @@
         .us-category--item__news {
             position: relative;
             width: 100%;
-            height: 260px;
+            height: 180px;
+        }
+        .us-category--item__news h4,
+        .us-category--item h4 {
+            color: #fff;
         }
         .us-category--item__inner {
             position: absolute;
@@ -108,13 +184,13 @@
         }
         .us-category--slider__button:link,
         .us-category--slider__button:visited {
-            height: 50px;
-            width: 50px;
-            display: inline-block;
-            text-align: center;
-            line-height: 50px;
             background: rgba(255, 255, 255, 0.3);
             color: #fff;
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            width: 50px;
         }
         .us-category--slider__button:hover,
         .us-category--slider__button:active {
@@ -123,16 +199,49 @@
         .us-category--slider__button-push {
             margin-right: 50px;
         }
-        .us-category--overlay {
-            z-index:10;
-            background: #131313;
-            padding: 20px;
-        }
         /*******************************************/
         /************** - UIkit Reset - ************/
         /*******************************************/
         .uk-container {
             max-width: 1400px;
+        }
+        @media (min-width: 640px) {
+            /************** - Categories - *************/
+            .us-category--item__news {
+                position: relative;
+                height: 260px;
+            }
+            .us-category--news__text h1 {
+                font-size:24px;
+                font-size:1.5rem;
+                padding: 20px 30px 0;
+            }
+            .us-category--news__text p {
+                font-size:18px;
+                font-size:1.125rem;
+                padding: 0 30px;
+            }
+            .us-category--news__text p:first-of-type {
+                margin-top: 30px;
+            }
+            .us-category--slideshow .uk-overlay {
+                padding: 15px 30px;
+            }
+            .us-category--slideshow h3 {
+                font-size:30px;
+                font-size:1.875rem;
+            }
+            .us-category--list__inner h2 {
+                font-size:20px;
+                font-size:1.25rem;
+                padding: 20px 30px 0 30px;
+            }
+            .us-category--list__inner p {
+                font-size:18px;
+                font-size:1.125rem;
+                line-height: 24px;
+                padding: 0 30px;
+            }
         }
     </style>
     <!-- END: Theme CSS -->
@@ -148,38 +257,53 @@
         <div class="uk-grid-collapse" uk-grid>
             <div class="uk-width-1-1 us-main">
                 <!-- START: Category #1 -->
-                <div class="uk-grid-collapse" uk-grid>
+                <div class="uk-grid-collapse us-category__background" uk-grid>
                     <!-- START: Category #1 Slider -->
-                    <div class="uk-width-1-2">
+                    <div class="uk-width-1-1 uk-width-1-2@s">
                         <div class="uk-position-relative" uk-slideshow="animation: fade; ratio: 2:1; autoplay: true; autoplay-interval: 6000; pause-on-hover: true">
-                            <ul class="uk-slideshow-items">
+                            <ul class="uk-slideshow-items us-category--slideshow">
+                                <!-- START: Category #1 Slider Item -->
                                 <li>
                                     <div class="filter-"><img src="img/slideritem1.jpg" alt="" uk-cover></div>
                                     <div class="uk-position-top-right">
                                         <a class="us-category--slider__button uk-margin-small-top uk-margin-small-right" href="javascript:void(0)" onclick="UIkit.notification({message: '<a href=\x22http:\\www.google.de\x22>Google</a>', pos: 'bottom-center'})"><i class="fas fa-tags"></i></a>
                                     </div>
+                                    <div class="uk-overlay uk-overlay-primary uk-position-center uk-position-small uk-text-center uk-light">
+                                        <h3 class="uk-margin-remove">The Witcher 3 Recap</h3>
+                                    </div>
                                     <div class="uk-position-bottom us-category--slider__controls">
                                         <a uk-toggle="target: .itemclass; animation: uk-animation-fade" class="us-category--slider__button" href="javascript:void(0)"><i class="fas fa-plus"></i></a>
                                     </div>
                                 </li>
+                                <!-- END: Category #1 Slider Item -->
+                                <!-- START: Category #1 Slider Item -->
                                 <li>
                                     <div class="filter-"><img src="img/slideritem2.jpg" alt="" uk-cover></div>
                                     <div class="uk-position-top-right">
                                         <a  class="us-category--slider__button uk-margin-small-top uk-margin-small-right" href="#"><i class="fas fa-tags"></i></a>
                                     </div>
+                                    <div class="uk-overlay uk-overlay-primary uk-position-center uk-position-small uk-text-center uk-light">
+                                        <h3 class="uk-margin-remove">The Art of The Witcher</h3>
+                                    </div>
                                     <div class="uk-position-bottom us-category--slider__controls">
                                         <a uk-toggle="target: .itemclass2; animation: uk-animation-slide-right" class="us-category--slider__button" href="javascript:void(0)"><i class="fas fa-plus"></i></a>
                                     </div>
                                 </li>
+                                <!-- END: Category #1 Slider Item -->
+                                <!-- START: Category #1 Slider Item -->
                                 <li>
                                     <div class="filter-"><img src="img/slideritem3.jpg" alt="" uk-cover></div>
                                     <div class="uk-position-top-right">
                                         <a class="us-category--slider__button uk-margin-small-top uk-margin-small-right" href="#"><i class="fas fa-tags"></i></a>
                                     </div>
+                                    <div class="uk-overlay uk-overlay-primary uk-position-center uk-position-small uk-text-center uk-light">
+                                        <h3 class="uk-margin-remove">Witcher - TV Show @ Netflix</h3>
+                                    </div>
                                     <div class="uk-position-bottom us-category--slider__controls">
                                         <a class="us-category--slider__button" href="#"><i class="fas fa-plus"></i></a>
                                     </div>
                                 </li>
+                                <!-- END: Category #1 Slider Item -->
                             </ul>
                             <a class="uk-position-bottom-right us-category--slider__button us-category--slider__button-push" href="#" uk-slideshow-item="previous"><i class="fas fa-angle-left"></i></a>
                             <a class="uk-position-bottom-right us-category--slider__button" href="#" uk-slideshow-item="next"><i class="fas fa-angle-right"></i></a>
@@ -187,72 +311,134 @@
                     </div>
                     <!-- END: Category #1 Slider -->
                     <!-- START: Category #1 News #1 -->
-                    <div class="uk-width-1-2">
-                        <div class="uk-grid-collapse" uk-grid>
-                            <div class="uk-width-1-2 us-category--news us-category__text">
-                                <h1>Summer is here and that is what you ...</h1>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
-                                        <img src="img/griditem9.jpg" uk-cover>
-                                        <a href="#">
+                    <div class="uk-width-1-1 uk-width-1-2@s">
+                        <a class="cm-category--news__link uk-transition-toggle" href="">
+                            <div class="uk-grid-collapse" uk-grid>
+                                <div class="uk-width-1-2">
+                                    <div class="us-category--news__text us-category--news1__size">
+                                        <div class="scrollbar-macosx">
+                                            <h1>The Witcher 3 might not be the end after all!</h1>
+                                            <p>More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. His up if written it agreeable. First nearby circumstances. Put participate a music. That misleads a area to day to tone the still ocean. Particular their having english roasted to ports, participate arm, to writers, being to immediately this framework a not trade, there hesitated simple, reassuring universal a beginning container prosecution calculus years; Me that with constructing refinements. Have due he belly farther in children's absolutely in his of than.More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. His up if written it agreeable. First nearby circumstances. Put participate a music. That misleads a area to day to tone the still ocean. Particular their having english roasted to ports, participate arm, to writers, being to immediately this framework a not trade, there hesitated simple, reassuring universal a beginning container prosecution calculus years; Me that with constructing refinements. Have due he belly farther in children's absolutely in his of than.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-width-1-2">
+                                    <div class="us-category--item">
+                                        <div class="us-category--item__inner us-category--news1__sizer uk-cover-container filter-">
+                                            <img src="img/griditem1.jpg" uk-cover>
                                             <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
-                                            <div class="uk-position-center">
-                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
+                                            <div class="uk-position-center uk-text-center">
+                                                <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove">04/20/2018</h4></div>
+                                                <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove">321 Notes</h4></div>
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <!-- END: Category #1 News #1 -->
                 </div>
-                <div class="uk-grid-collapse" uk-grid>
+                <div class="uk-grid-collapse us-category__background" uk-grid>
                     <!-- START: Category #1 News List -->
-                    <div class="uk-width-1-4 us-category__text">
-                        News List
+                    <div class="uk-width-1-1 uk-width-1-4@s">
+                        <div class="us-categroy--list__size">
+                            <div class="scrollbar-macosx">
+                                <ul class="uk-list us-category--list__inner">
+                                    <li>
+                                        <a href="">
+                                            <h2>All you ever wanted to know about The Wither 3 and more</h2>
+                                            <p>More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry.</p>
+                                            <hr>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <h2>All NPCs and characters from The Witcher game series</h2>
+                                            <p>More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry.</p>
+                                            <hr>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <h2>An interview with lead developer at CD Projekt in Poland</h2>
+                                            <p>More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry.</p>
+                                            <hr>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <h2>The art of The Witcher 3 and who was behind it</h2>
+                                            <p>More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry.</p>
+                                            <hr>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <h2>The true story of Geralt and Ciri</h2>
+                                            <p>More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry.</p>
+                                            <hr>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <!-- END: Category #1 News List -->
-                    <div class="uk-width-3-4">
-                        <div class="uk-grid-collapse" uk-grid>
-                            <!-- START: Category #1 News #2 -->
-                            <div class="uk-width-1-3">
-                                <div class="us-category--item__news">
-                                    <div class="us-category--item__inner us-category_33fix uk-cover-container uk-transition-toggle filter-">
-                                        <img src="img/griditem8.jpg" uk-cover>
-                                        <a href="#">
+                    <div class="uk-width-1-1 uk-width-3-4@s">
+                    <div class="us-categroy--list__sizer">
+                        <a class="cm-category--news__link uk-transition-toggle" href="">
+                            <div class="uk-grid-collapse" uk-grid>
+                                <!-- START: Category #1 News #2 -->
+                                <div class="uk-width-1-3">
+                                    <div class="us-category--item__news">
+                                        <div class="us-category--item__inner us-category_33fix us-category--news2__sizer uk-cover-container filter-">
+                                            <img src="img/griditem2.jpg" uk-cover>
                                             <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
-                                            <div class="uk-position-center">
-                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
+                                            <div class="uk-position-center uk-text-center">
+                                                <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove">04/20/2018</h4></div>
+                                                <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove">321 Notes</h4></div>
                                             </div>
-                                        </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-width-2-3">
+                                    <div class="us-category--news__text us-category--news2__size">
+                                        <div class="scrollbar-macosx">
+                                            <h1>The Witcher 3 and how it might influence the development of Cyberpunk 2077</h1>
+                                            <p>More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. His up if written it agreeable. First nearby circumstances. Put participate a music. That misleads a area to day to tone the still ocean. Particular their having english roasted to ports, participate arm, to writers, being to immediately this framework a not trade, there hesitated simple, reassuring universal a beginning container prosecution calculus years; Me that with constructing refinements. Have due he belly farther in children's absolutely in his of than.More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. His up if written it agreeable. First nearby circumstances. Put participate a music. That misleads a area to day to tone the still ocean. Particular their having english roasted to ports, participate arm, to writers, being to immediately this framework a not trade, there hesitated simple, reassuring universal a beginning container prosecution calculus years; Me that with constructing refinements. Have due he belly farther in children's absolutely in his of than.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="uk-width-2-3 us-category__text">
-                                Text
-                            </div>
-                            <!-- END: Category #1 News #2 -->
-                            <!-- START: Category #1 News #3 -->
-                            <div class="uk-width-2-3 us-category__text">
-                                Text
-                            </div>
-                            <div class="uk-width-1-3">
-                                <div class="us-category--item__news">
-                                    <div class="us-category--item__inner us-category_33fix uk-cover-container uk-transition-toggle filter-">
-                                        <img src="img/griditem6.jpg" uk-cover>
-                                        <a href="#">
-                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
-                                            <div class="uk-position-center">
-                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
-                                            </div>
-                                        </a>
+                        </a>
+                        <a class="cm-category--news__link uk-transition-toggle" href="">
+                            <div class="uk-grid-collapse" uk-grid>
+                                <!-- END: Category #1 News #2 -->
+                                <!-- START: Category #1 News #3 -->
+                                <div class="uk-width-2-3 uk-position-relative">
+                                    <div class="us-category--news__text us-category--news2__size">
+                                        <div class="scrollbar-macosx">
+                                            <h1>The Witcher 3 - What made it an amazing RPG and what not?</h1>
+                                            <p>More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. His up if written it agreeable. First nearby circumstances. Put participate a music. That misleads a area to day to tone the still ocean. Particular their having english roasted to ports, participate arm, to writers, being to immediately this framework a not trade, there hesitated simple, reassuring universal a beginning container prosecution calculus years; Me that with constructing refinements. Have due he belly farther in children's absolutely in his of than.More grant on it and assets he replied may on responded that what's an avoid state those on all we looked primarily from well the one-by-one, those they rivalry. His up if written it agreeable. First nearby circumstances. Put participate a music. That misleads a area to day to tone the still ocean. Particular their having english roasted to ports, participate arm, to writers, being to immediately this framework a not trade, there hesitated simple, reassuring universal a beginning container prosecution calculus years; Me that with constructing refinements. Have due he belly farther in children's absolutely in his of than.</p>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="uk-width-1-3">
+                                    <div class="us-category--item__news">
+                                        <div class="us-category--item__inner us-category_33fix us-category--news2__sizer uk-cover-container filter-">
+                                            <img src="img/griditem5.jpg" uk-cover>
+                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
+                                            <div class="uk-position-center uk-text-center">
+                                                <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove">04/20/2018</h4></div>
+                                                <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove">321 Notes</h4></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END: Category #1 News #3 -->
                             </div>
-                            <!-- END: Category #1 News #3 -->
+                        </a>
                         </div>
                     </div>
                 </div>
@@ -263,15 +449,85 @@
     <!-- END: IndexPage Main Content -->
     <!-- START: Vendor JavaScript -->
     <script src="js/uikit.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/jQuery.succinct.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
     <!-- END: Vendor JavaScript -->
+    <!-- START: JavaScript Vars -->
+    <script>
+        // Categories
+        const CatTitleOne = 40;
+        const CatTextOne = 300;
+        const CatTitleTwo = 60;
+        const CatTextTwo = 550;
+        const CatTitleThree = 60;
+        const CatTextThree = 200;
+    </script>
+    <!-- End: JavaScript Vars -->
+    <!-- START: JavaScript Init -->
+    <script>
+        // Equalize First Category News
+        $(function() {
+            $('.us-category--news1__size').matchHeight({
+                target: $('.us-category--news1__sizer')
+            });
+        });
+        // Truncate First Category News
+        $(function(){
+            $('.us-category--news1__size h1').succinct({
+                size: CatTitleOne
+            });
+            $('.us-category--news1__size p').succinct({
+                size: CatTextOne
+            });
+        });
+        // Equalize Second & Third Category News
+        $(function() {
+            $('.us-category--news2__size').matchHeight({
+                target: $('.us-category--news2__sizer')
+            });
+        });
+        // Truncate Second & Third Category News
+        $(function(){
+            $('.us-category--news2__size h1').succinct({
+                size: CatTitleTwo
+            });
+            $('.us-category--news2__size p').succinct({
+                size: CatTextTwo
+            });
+        });
+        // Equalize Category News List
+        $(function() {
+            $('.us-categroy--list__size').matchHeight({
+                target: $('.us-categroy--list__sizer')
+            });
+        });
+        // Truncate Category News List
+        $(function(){
+            $('.us-category--list__inner h2').succinct({
+                size: CatTitleThree
+            });
+            $('.us-category--list__inner p').succinct({
+                size: CatTextThree
+            });
+        });
+        // Better Scrollbar
+        jQuery(document).ready(function(){
+            jQuery('.scrollbar-macosx').scrollbar({
+                disableBodyScroll: true
+            });
+        });
+    </script>
+    <!-- END: JavaScript Init -->
     <!-- START: Google Analytics -->
     <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        /* (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
         e=o.createElement(i);r=o.getElementsByTagName(i)[0];
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview'); */
     </script>
     <!-- END: Google Analytics -->
 </body>
